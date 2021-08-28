@@ -34,6 +34,7 @@
       justify-content: center;
       top: 110px;
       right: 100px;
+      cursor: pointer;
     }
     .vectors {
       display: flex;
@@ -217,21 +218,21 @@
     margin-bottom: 50px;
 
     h2 {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
-        text-align: center;
-      }
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      text-align: center;
+    }
 
-      p {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        margin: 20px;
-        text-align: center;
-      }
+    p {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      margin: 20px;
+      text-align: center;
+    }
     .cardsContainer {
       .card {
         display: flex;
@@ -254,6 +255,7 @@
           justify-content: center;
           top: 110px;
           right: 100px;
+          cursor: pointer;
         }
         p {
           font-style: normal;
@@ -280,12 +282,12 @@
     flex-direction: column;
     align-items: center;
     .section1 {
-        h3 {
-            right: 45px;
-          }
-          .btn {
-            right: 550px;
-          }
+      h3 {
+        right: 45px;
+      }
+      .btn {
+        right: 550px;
+      }
       .vectors {
         .imgSct1 {
           z-index: 1;
@@ -321,13 +323,13 @@
             width: 100%;
             height: 566px;
             right: -700px;
-            top: 455px;            
+            top: 455px;
           }
         }
         .imgSct2_2 {
           div:first-child {
             right: -250px;
-            top: 455px;            
+            top: 455px;
           }
         }
       }
@@ -345,7 +347,7 @@
       }
     }
     .section4 {
-        width: 50%;
+      width: 50%;
       .vectors {
         display: flex;
         z-index: -1;

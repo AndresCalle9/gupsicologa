@@ -30,7 +30,7 @@ const Index = () => {
       {/* section 1*/}
       <div className={s.section1}>
         <h3>Te acompaño en tu proceso Psicológico</h3>
-        <a className={s.btn} href="https://wa.link/nmup20">
+        <a className={s.btn} href="https://wa.link/nmup20" target="_blank">
           ¡Quiero una cita!
         </a>
         <div className={s.vectors}>
@@ -145,34 +145,35 @@ const Index = () => {
         </div>
         <div className={s.info}>
           <h2>¿Cuándo ir a terapia?</h2>
-            <div className={s.infoColumns}>
-          <div className={s.left}>
-            {screenWidth < 768 ? <div></div> : <p className={s.number}>1</p>}
-            <p>
-              Haz sufrido un trauma en el paso y no puedes dejar de pensar en
-              ello.
-            </p>
-                        {screenWidth < 768 ? <div></div> : <p className={s.number}>2</p>}
+          <div className={s.infoColumns}>
+            <div className={s.left}>
+              {screenWidth < 768 ? <div></div> : <p className={s.number}>1</p>}
+              <p>
+                Haz sufrido un trauma en el paso y no puedes dejar de pensar en
+                ello.
+              </p>
+              {screenWidth < 768 ? <div></div> : <p className={s.number}>2</p>}
 
-            <p>Te sientes descontento en actividades que antes disfrutabas</p>
-                        {screenWidth < 768 ? <div></div> : <p className={s.number}>3</p>}
+              <p>Te sientes descontento en actividades que antes disfrutabas</p>
+              {screenWidth < 768 ? <div></div> : <p className={s.number}>3</p>}
 
-            <p>Sientes que tu malestar emocional afecta tu vida diaria.</p>
+              <p>Sientes que tu malestar emocional afecta tu vida diaria.</p>
+            </div>
+            <div className={s.right}>
+              {screenWidth < 768 ? <div></div> : <p className={s.number}>4</p>}
+
+              <p>Si necesitas un espacio para ser escuchado y comprendido.</p>
+              {screenWidth < 768 ? <div></div> : <p className={s.number}>5</p>}
+
+              <p>
+                Cuando requieras una orientación ante una situación en
+                particular.
+              </p>
+              {screenWidth < 768 ? <div></div> : <p className={s.number}>6</p>}
+
+              <p>Cuando simplemente necesites hablar con alguien.</p>
+            </div>
           </div>
-          <div className={s.right}>
-                        {screenWidth < 768 ? <div></div> : <p className={s.number}>4</p>}
-
-            <p>Si necesitas un espacio para ser escuchado y comprendido.</p>
-                        {screenWidth < 768 ? <div></div> : <p className={s.number}>5</p>}
-
-            <p>
-              Cuando requieras una orientación ante una situación en particular.
-            </p>
-                        {screenWidth < 768 ? <div></div> : <p className={s.number}>6</p>}
-
-            <p>Cuando simplemente necesites hablar con alguien.</p>
-          </div>
-                </div>
 
           <h3>Rercuerda</h3>
           <h4>¡Todo malestar emocional es importante!</h4>
@@ -195,14 +196,14 @@ const Index = () => {
                 alt="icono de computador"
                 placeholder="blur"
                 layout="responsive"
-                />
+              />
             </div>
             <h3>Consulta virtual</h3>
             <p>
               Desde la comodida de tu hogar, crearemos un espacio donde
               estaremos conecados tu y yo.
             </p>
-            <a className={s.btn} href="https://wa.link/nmup20">
+            <a className={s.btn} href="https://wa.link/nmup20" target="_blank">
               ¡Quiero una cita!
             </a>
           </div>
@@ -220,7 +221,7 @@ const Index = () => {
               Desde nuestro consultorio, ubicado en Sabaneta, Antioquio,
               estaremos juntos en este proceso de cambio.
             </p>
-            <a className={s.btn} href="https://wa.link/nmup20">
+            <a className={s.btn} href="https://wa.link/nmup20" target="_blank">
               ¡Quiero una cita!
             </a>
           </div>

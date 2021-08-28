@@ -18,6 +18,7 @@
   -o-transition: 1s;
   transition: 1s;
   animation-duration: 0.5s;
+
   .close {
     position: absolute;
     top: 90px;
@@ -26,6 +27,8 @@
     color: black;
     font-size: 36px;
     font-weight: bold;
+    cursor: pointer;
+
   }
   .container {
     height: 100%;
