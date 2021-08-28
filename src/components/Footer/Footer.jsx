@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
 import Image from "next/image";
 import logo from "../../../public/assets/logo2.png";
 import wpp from "../../../public/assets/wpp.png";
@@ -7,14 +8,24 @@ import lc from "../../../public/assets/lc.png";
 import Link from "next/link";
 import s from "./Footer.module.scss";
 import footerImg from "../../../public/assets/footerImg.png"
+import footerImgD from "../../../public/assets/footerImgD.png"
+
 
 const Footer = () => {
+    const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    setScreenWidth(window.screen.width);
+  }, []);
+
+  const img = screenWidth < 768 ? footerImg : footerImgD;
+
   return (
     <div className={s.container}>
       <div className={s.vectors}>
         <div className={s.imgFooter}>
           <Image
-            src={footerImg}
+            src={img}
             alt="fondo del footer"
             placeholder="blur"
             layout="responsive"
@@ -23,7 +34,7 @@ const Footer = () => {
       </div>
       <div className={s.top}>
         <div className={s.icon}>
-          <Link href="https://instagram.com/pisologagloriauribe">
+          <Link href="https://www.instagram.com/psicologagloriauribe/">
             <a target="_blank">
               <div className={s.imgSct5}>
                 <Image

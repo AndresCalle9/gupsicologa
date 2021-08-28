@@ -137,7 +137,7 @@
         div:first-child {
           overflow-y: visible;
           width: 100%;
-          height: 800px;
+          height: 900px;
           transform: translateX(270px);
         }
       }
@@ -146,7 +146,7 @@
         div:first-child {
           overflow-y: visible;
           width: 100%;
-          height: 830px;
+          height: 930px;
           transform: translateX(-350px);
           top: -30px;
         }
@@ -158,18 +158,30 @@
       flex-direction: column;
       align-items: center;
       position: absolute;
-      top:30px;
-      div {
-        width: 16px;
-        height: 16px;
-        background-color: $blue;
-        border-radius: 15px;
-        margin: 10px;
+      top: 30px;
+      .infoColumns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .left,
+        .right {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          div {
+            width: 16px;
+            height: 16px;
+            background-color: $blue;
+            border-radius: 15px;
+            margin: 10px;
+          }
+          p {
+            margin: 10px;
+            text-align: center;
+          }
+        }
       }
-      p {
-        margin: 10px;
-        text-align: center;
-      }
+
       h2 {
         font-style: normal;
         font-weight: bold;
@@ -177,6 +189,7 @@
         line-height: 44px;
         text-align: center;
       }
+
       h3 {
         font-style: normal;
         font-weight: normal;
@@ -196,51 +209,202 @@
     }
   }
   .section5 {
-      width: 90%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 50px;
-      .imgSct5{
-          margin: 20px;
-          width: 85px;
-          height: 85px;
-      }
-      .btn {
-        width: 135px;
-        height: 45px;
-        background-color: $blue;
-        color: $white;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 110px;
-        right: 100px;
-      }
-      p{
-        font-style: normal;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
-        margin: 20px;
-        text-align: center;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
 
-      }
-      h2{
+    h2 {
         font-style: normal;
         font-weight: bold;
         font-size: 36px;
         line-height: 44px;
         text-align: center;
       }
-      h3{
+
+      p {
         font-style: normal;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 20px;
+        text-align: center;
       }
+    .cardsContainer {
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .imgSct5 {
+          margin: 20px;
+          width: 85px;
+          height: 85px;
+        }
+        .btn {
+          width: 135px;
+          height: 45px;
+          background-color: $blue;
+          color: $white;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          top: 110px;
+          right: 100px;
+        }
+        p {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 22px;
+          margin: 20px;
+          text-align: center;
+        }
+        h3 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 786px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .section1 {
+        h3 {
+            right: 45px;
+          }
+          .btn {
+            right: 550px;
+          }
+      .vectors {
+        .imgSct1 {
+          z-index: 1;
+          div:first-child {
+            overflow-y: visible;
+            top: 55px;
+            left: -180px;
+          }
+        }
+        .imgSct1_1 {
+          width: 545px;
+          z-index: 1;
+          div:first-child {
+            overflow-y: visible;
+            width: 100%;
+            left: -730px;
+          }
+        }
+      }
+    }
+    .section2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .background {
+        width: 30%;
+      }
+      .vectors {
+        .imgSct2 {
+          div:first-child {
+            overflow-y: visible;
+            width: 100%;
+            height: 566px;
+            right: -700px;
+            top: 455px;            
+          }
+        }
+        .imgSct2_2 {
+          div:first-child {
+            right: -250px;
+            top: 455px;            
+          }
+        }
+      }
+    }
+    .section3 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .cardsContainer {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .section4 {
+        width: 50%;
+      .vectors {
+        display: flex;
+        z-index: -1;
+        .imgSct4 {
+          width: 1500px;
+          div:first-child {
+            overflow-y: visible;
+            width: 100%;
+            height: 800px;
+            transform: translateX(700px);
+          }
+        }
+        .imgSct4_2 {
+          width: 1500px;
+          div:first-child {
+            overflow-y: visible;
+            width: 100%;
+            height: 800px;
+            transform: translateX(-800px);
+            top: 20px;
+          }
+        }
+      }
+      .info {
+        margin-top: 50px;
+        .infoColumns {
+          display: flex;
+          flex-direction: row;
+          .left,
+          .right {
+            .number {
+              font-style: normal;
+              font-weight: normal;
+              font-size: 40px;
+              line-height: 88px;
+            }
+          }
+        }
+      }
+    }
+    .section5 {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .cardsContainer {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .card {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
   }
 }

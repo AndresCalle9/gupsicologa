@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import s from "../styles/pages/Home.module.scss";
 import img1 from "../../public/assets/imgSect1.png";
@@ -12,7 +12,19 @@ import img4_2 from "../../public/assets/img4-1.png";
 import computer from "../../public/assets/computer.png";
 import people from "../../public/assets/people.png";
 
+import img4D from "../../public/assets/img4D.png";
+import img4D_2 from "../../public/assets/img4D-1.png";
+
 const index = () => {
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    setScreenWidth(window.screen.width);
+  }, []);
+
+  const sct4 = screenWidth < 768 ? img4 : img4D;
+
+  const sct4_2 = screenWidth < 768 ? img4_2 : img4D_2;
   return (
     <div className={s.container}>
       {/* section 1*/}
@@ -87,34 +99,36 @@ const index = () => {
       {/* Section 3 */}
       <div className={s.section3}>
         <h3>Áreas de atención</h3>
-        <Card
-          title={"Duelo"}
-          text={
-            "El duelo es un proceso psicológico de elaboración y adaptación ante una pérdida emocional."
-          }
-          docPath={"duelo.pdf"}
-        />
-        <Card
-          title={"Arte-terapia"}
-          text={
-            "La Arteterapia es un tipo de terapia artística que consiste en la utilización del arte como vía terapéutica"
-          }
-          docPath={""}
-        />
-        <Card
-          title={"Depresión"}
-          text={
-            "Es una enfermedad caracterizada por una tirsteza persistente y por la pérdida de interés en las actividades que normalmente disfruta."
-          }
-          docPath={"Depresión.pdf"}
-        />
+        <div className={s.cardsContainer}>
+          <Card
+            title={"Duelo"}
+            text={
+              "El duelo es un proceso psicológico de elaboración y adaptación ante una pérdida emocional."
+            }
+            docPath={"duelo.pdf"}
+          />
+          <Card
+            title={"Arte-terapia"}
+            text={
+              "La Arteterapia es un tipo de terapia artística que consiste en la utilización del arte como vía terapéutica"
+            }
+            docPath={""}
+          />
+          <Card
+            title={"Depresión"}
+            text={
+              "Es una enfermedad caracterizada por una tirsteza persistente y por la pérdida de interés en las actividades que normalmente disfruta."
+            }
+            docPath={"Depresión.pdf"}
+          />
+        </div>
       </div>
       {/* Section 4 */}
       <div className={s.section4}>
         <div className={s.vectors}>
           <div className={s.imgSct4}>
             <Image
-              src={img4}
+              src={sct4}
               alt="image principal sección 4"
               placeholder="blur"
               layout="responsive"
@@ -122,7 +136,7 @@ const index = () => {
           </div>
           <div className={s.imgSct4_2}>
             <Image
-              src={img4_2}
+              src={sct4_2}
               alt="image secundaria sección 4"
               placeholder="blur"
               layout="responsive"
@@ -131,21 +145,34 @@ const index = () => {
         </div>
         <div className={s.info}>
           <h2>¿Cuándo ir a terapia?</h2>
-          <div></div>
-          <p>
-            Haz sufrido un trauma en el paso y no puedes dejar de pensar en
-            ello.
-          </p>
-          <div></div>
-          <p>Te sientes descontento en actividades que antes disfrutabas</p>
-          <div></div>
-          <p>Sientes que tu malestar emocional afecta tu vida diaria.</p>
-          <div></div>
-          <p>Si necesitas un espacio para ser escuchado y comprendido.</p>
-          <div></div>
-          <p>
-            Cuando requieras una orientación ante una situación en particular.
-          </p>
+            <div className={s.infoColumns}>
+          <div className={s.left}>
+            {screenWidth < 768 ? <div></div> : <p className={s.number}>1</p>}
+            <p>
+              Haz sufrido un trauma en el paso y no puedes dejar de pensar en
+              ello.
+            </p>
+                        {screenWidth < 768 ? <div></div> : <p className={s.number}>2</p>}
+
+            <p>Te sientes descontento en actividades que antes disfrutabas</p>
+                        {screenWidth < 768 ? <div></div> : <p className={s.number}>3</p>}
+
+            <p>Sientes que tu malestar emocional afecta tu vida diaria.</p>
+          </div>
+          <div className={s.right}>
+                        {screenWidth < 768 ? <div></div> : <p className={s.number}>4</p>}
+
+            <p>Si necesitas un espacio para ser escuchado y comprendido.</p>
+                        {screenWidth < 768 ? <div></div> : <p className={s.number}>5</p>}
+
+            <p>
+              Cuando requieras una orientación ante una situación en particular.
+            </p>
+                        {screenWidth < 768 ? <div></div> : <p className={s.number}>6</p>}
+
+            <p>Cuando simplemente necesites hablar con alguien.</p>
+          </div>
+                </div>
 
           <h3>Rercuerda</h3>
           <h4>¡Todo malestar emocional es importante!</h4>
@@ -160,38 +187,44 @@ const index = () => {
           en que actuas y tus emociones, aplicando asi tecnicas psicologicas que
           contribuyen al cambio, haciendo que te sientas mejor.
         </p>
-        <div className={s.imgSct5}>
-          <Image
-            src={computer}
-            alt="icono de computador"
-            placeholder="blur"
-            layout="responsive"
-          />
+        <div className={s.cardsContainer}>
+          <div className={s.card}>
+            <div className={s.imgSct5}>
+              <Image
+                src={computer}
+                alt="icono de computador"
+                placeholder="blur"
+                layout="responsive"
+                />
+            </div>
+            <h3>Consulta virtual</h3>
+            <p>
+              Desde la comodida de tu hogar, crearemos un espacio donde
+              estaremos conecados tu y yo.
+            </p>
+            <a className={s.btn} href="https://wa.link/nmup20">
+              ¡Quiero una cita!
+            </a>
+          </div>
+          <div className={s.card}>
+            <div className={s.imgSct5}>
+              <Image
+                src={people}
+                alt="icono de personas"
+                placeholder="blur"
+                layout="responsive"
+              />
+            </div>
+            <h3>Consulta presencial</h3>
+            <p>
+              Desde nuestro consultorio, ubicado en Sabaneta, Antioquio,
+              estaremos juntos en este proceso de cambio.
+            </p>
+            <a className={s.btn} href="https://wa.link/nmup20">
+              ¡Quiero una cita!
+            </a>
+          </div>
         </div>
-        <h3>Consulta virtual</h3>
-        <p>
-          Desde la comodida de tu hogar, crearemos un espacio donde estaremos
-          conecados tu y yo.
-        </p>
-        <a className={s.btn} href="https://wa.link/nmup20">
-          ¡Quiero una cita!
-        </a>
-        <div className={s.imgSct5}>
-          <Image
-            src={people}
-            alt="icono de personas"
-            placeholder="blur"
-            layout="responsive"
-          />
-        </div>
-        <h3>Consulta presencial</h3>
-        <p>
-          Desde nuestro consultorio, ubicado en Sabaneta, Antioquio, estaremos
-          juntos en este proceso de cambio.
-        </p>
-        <a className={s.btn} href="https://wa.link/nmup20">
-          ¡Quiero una cita!
-        </a>
       </div>
     </div>
   );
