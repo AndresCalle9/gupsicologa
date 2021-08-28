@@ -15,7 +15,7 @@ import people from "../../public/assets/people.png";
 import img4D from "../../public/assets/img4D.png";
 import img4D_2 from "../../public/assets/img4D-1.png";
 
-const index = () => {
+const Index = () => {
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
@@ -230,4 +230,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
