@@ -6,10 +6,21 @@ import ig from "../../../public/assets/ig.png";
 import lc from "../../../public/assets/lc.png";
 import Link from "next/link";
 import s from "./Footer.module.scss";
+import footerImg from "../../../public/assets/footerImg.png"
 
 const Footer = () => {
   return (
     <div className={s.container}>
+      <div className={s.vectors}>
+        <div className={s.imgFooter}>
+          <Image
+            src={footerImg}
+            alt="fondo del footer"
+            placeholder="blur"
+            layout="responsive"
+          />
+        </div>
+      </div>
       <div className={s.top}>
         <div className={s.icon}>
           <Link href="https://instagram.com/pisologagloriauribe">
@@ -17,7 +28,7 @@ const Footer = () => {
               <div className={s.imgSct5}>
                 <Image
                   src={ig}
-                  alt="image secundaria sección 2"
+                  alt="icono instagram"
                   placeholder="blur"
                   layout="responsive"
                 />
@@ -32,7 +43,7 @@ const Footer = () => {
               <div className={s.imgSct5}>
                 <Image
                   src={wpp}
-                  alt="image secundaria sección 2"
+                  alt="icono whatsapp"
                   placeholder="blur"
                   layout="responsive"
                 />
@@ -46,7 +57,7 @@ const Footer = () => {
             <div className={s.imgSct5}>
               <Image
                 src={lc}
-                alt="image secundaria sección 2"
+                alt="icono ubicacion"
                 placeholder="blur"
                 layout="responsive"
               />

@@ -6,32 +6,46 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: $brown;
+  position: relative;
+  .vectors {
+      position: absolute;
+    display: flex;
+    z-index: -1;
+    .imgFooter {
+      width: 544px;
+      div:first-child {
+        overflow-y: visible;
+        width: 900px;
+        height: 670px;
+        transform: translateX(-250px);
+      }
+    }
+  }
   .top {
     display: flex;
     flex-direction: column;
     align-items: center;
     .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        a{
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 20px;
-          width: 50%;
-          .imgSct5 {
-              width: 50px;
-              height: 50px;
-            }
-            h3{
-                font-style: normal;
-                font-weight: bold;
-                font-size: 18px;
-                line-height: 22px;
-            }
+        margin: 20px;
+        width: 50%;
+        .imgSct5 {
+          width: 50px;
+          height: 50px;
         }
+        h3 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
     }
   }
   .bottom {
