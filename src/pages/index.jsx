@@ -30,9 +30,10 @@ const Index = () => {
       {/* section 1*/}
       <div className={s.section1}>
         <h3>Te acompaño en tu proceso Psicológico</h3>
-        <a className={s.btn} href="https://wa.link/nmup20" target="_blank">
+        {/* <a className={s.btn} href="https://wa.link/nmup20" target="_blank">
           ¡Quiero una cita!
-        </a>
+        </a> */}
+        <a className={s.btn}>Sobre mi</a>
         <div className={s.vectors}>
           <div className={s.imgSct1}>
             <Image
@@ -54,7 +55,7 @@ const Index = () => {
       </div>
       {/* Section 2 */}
       <div className={s.section2}>
-        <div className={s.background}>
+        <div className={s.background} id="aboutMe">
           <div className={s.imgSct2}>
             <Image
               src={profile}
@@ -97,7 +98,7 @@ const Index = () => {
         </div>
       </div>
       {/* Section 3 */}
-      <div className={s.section3}>
+      <div className={s.section3} id="services">
         <h3>Áreas de atención</h3>
         <div className={s.cardsContainer}>
           <Card
@@ -124,7 +125,7 @@ const Index = () => {
         </div>
       </div>
       {/* Section 4 */}
-      <div className={s.section4}>
+      <div className={s.section4} id="when">
         <div className={s.vectors}>
           <div className={s.imgSct4}>
             <Image
@@ -180,7 +181,7 @@ const Index = () => {
         </div>
       </div>
       {/* Section 5*/}
-      <div className={s.section5}>
+      <div className={s.section5} id="contact">
         <h2>¿Cómo puedo ayudarte?</h2>
         <p>
           Nuestro consultorio es un espacio creado pensando en tu bienestar y
