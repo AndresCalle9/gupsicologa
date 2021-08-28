@@ -1,0 +1,116 @@
+@import "../variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Marvel;
+  position: relative;
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    h3 {
+      position: absolute;
+      width: 60%;
+      font-family: Marvel;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 29px;
+      right: 45px;
+      top: 40px;
+    }
+    .btn {
+      position: absolute;
+      width: 122px;
+      height: 35px;
+      background-color: $blue;
+      color: $white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      top: 110px;
+      right: 100px;
+    }
+    .vectors {
+      display: flex;
+      .imgSct1 {
+        width: 545px;
+        z-index: 1;
+        div:first-child {
+          overflow-y: visible;
+          width: 100%;
+          height: 566px;
+          top: 55px;
+          left: 40px;
+        }
+      }
+      .imgSct1_1 {
+        width: 545px;
+        z-index: 1;
+        div:first-child {
+          overflow-y: visible;
+          width: 100%;
+          height: 590px;
+          left: -490px;
+          top: 45px;
+        }
+      }
+    }
+  }
+  .section2 {
+    width: 90%;
+    z-index: 2;
+    transform: translateY(-350px);
+    .background {
+      background-color: $brown;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      .imgSct2 {
+        width: 60%;
+        padding: 20px;
+      }
+      p {
+        text-align: center;
+        line-height: 25px;
+        padding: 25px;
+        font-style: normal;
+        font-weight: normal;
+        font-family: Roboto;
+        z-index: 2;
+      }
+    }
+    .vectors {
+      display: flex;
+      transform: translateY(-300px);
+      z-index: -1;
+      position: absolute;
+      .imgSct2 {
+        width: 428px;
+        div:first-child {
+          overflow-y: visible;
+          width: 100%;
+          height: 566px;
+        }
+      }
+      .imgSct2_2 {
+        width: 450px;
+        div:first-child {
+          overflow-y: visible;
+          width: 100%;
+          height: 600px;
+          right: 440px;
+          top: -15px;
+        }
+      }
+    }
+  }
+}
